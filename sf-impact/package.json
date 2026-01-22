@@ -1,0 +1,23 @@
+{
+  "name": "sf-impact",
+  "version": "0.1.0",
+  "description": "Salesforce metadata impact analyzer (Apex/Flows/LWC/Reports) for schema and ref changes",
+  "type": "commonjs",
+  "license": "MIT",
+  "private": true,
+  "bin": {
+    "sf-impact": "bin/cli.js"
+  },
+  "scripts": {
+    "analyze": "node bin/cli.js analyze",
+    "dev": "node bin/cli.js",
+    "lint": "echo \"(optional) add eslint\""
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "fast-glob": "^3.3.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

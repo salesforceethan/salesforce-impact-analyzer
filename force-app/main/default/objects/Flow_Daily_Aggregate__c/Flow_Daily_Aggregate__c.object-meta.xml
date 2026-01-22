@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides/>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Daily rollups of Flow performance and reliability metrics for dashboards and reports.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>false</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <label>Flow Daily Aggregate</label>
+    <nameField>
+        <displayFormat>FDA-{00000000}</displayFormat>
+        <label>Aggregate Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Flow Daily Aggregates</pluralLabel>
+    <recordTypes/>
+    <sharingModel>Private</sharingModel>
+
+    <fields>
+        <fullName>AggregateDate__c</fullName>
+        <description>The date (UTC) this aggregate summarizes</description>
+        <externalId>false</externalId>
+        <label>Aggregate Date</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+        <unique>false</unique>
+    </fields>
+
+    <fields>
+        <fullName>FlowApiName__c</fullName>
+        <externalId>false</externalId>
+        <label>Flow API Name</label>
+        <length>255</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+
+    <fields>
+        <fullName>Version__c</fullName>
+        <description>Flow version number aggregated (optional)</description>
+        <externalId>false</externalId>
+        <label>Version</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+
+    <fields>
+        <fullName>RunCount__c</fullName>
+        <externalId>false</externalId>
+        <label>Run Count</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+        <defaultValue>0</defaultValue>
+    </fields>
+
+    <fields>
+        <fullName>FailCount__c</fullName>
+        <externalId>false</externalId>
+        <label>Fail Count</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <defaultValue>0</defaultValue>
+    </fields>
+
+    <fields>
+        <fullName>FailRate__c</fullName>
+        <description>Failure rate (0.0 - 1.0)</description>
+        <externalId>false</externalId>
+        <label>Fail Rate</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+    </fields>
+
+    <fields>
+        <fullName>AvgMs__c</fullName>
+        <externalId>false</externalId>
+        <label>Average Duration (ms)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+    </fields>
+
+    <fields>
+        <fullName>P95Ms__c</fullName>
+        <externalId>false</externalId>
+        <label>P95 Duration (ms)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+    </fields>
+
+    <fields>
+        <fullName>P99Ms__c</fullName>
+        <externalId>false</externalId>
+        <label>P99 Duration (ms)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+    </fields>
+
+    <fields>
+        <fullName>CPUHighCount__c</fullName>
+        <externalId>false</externalId>
+        <label>High CPU Count</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <defaultValue>0</defaultValue>
+    </fields>
+
+    <fields>
+        <fullName>SOQLHighCount__c</fullName>
+        <externalId>false</externalId>
+        <label>High SOQL Count</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <defaultValue>0</defaultValue>
+    </fields>
+
+    <fields>
+        <fullName>DMLHighCount__c</fullName>
+        <externalId>false</externalId>
+        <label>High DML Count</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <defaultValue>0</defaultValue>
+    </fields>
+
+    <fields>
+        <fullName>ReleaseTag__c</fullName>
+        <description>Optional release tag for pre/post comparisons</description>
+        <externalId>false</externalId>
+        <label>Release Tag</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+</CustomObject>

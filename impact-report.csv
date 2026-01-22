@@ -1,0 +1,10 @@
+file,matchCount,line,pattern,targets,snippet
+force-app\main\default\objects\Idea\Idea.object-meta.xml,4,63,".Title","User.Title","<customTabListAdditionalFields>IDEA.TITLE</customTabListAdditionalFields>"
+force-app\main\default\objects\Idea\Idea.object-meta.xml,4,73,".Title","User.Title","<lookupDialogsAdditionalFields>IDEA.TITLE</lookupDialogsAdditionalFields>"
+force-app\main\default\objects\Idea\Idea.object-meta.xml,4,75,".Title","User.Title","<lookupPhoneDialogsAdditionalFields>IDEA.TITLE</lookupPhoneDialogsAdditionalFields>"
+force-app\main\default\objects\Idea\Idea.object-meta.xml,4,77,".Title","User.Title","<searchResultsAdditionalFields>IDEA.TITLE</searchResultsAdditionalFields>"
+force-app\main\default\triggers\ClosedOpportunityTrigger.trigger,1,25,"OwnerId","OwnerId","t.OwnerId = opp.OwnerId;     // optional, but nice: assign to opp owner"
+force-app\main\default\objects\ContentVersion\ContentVersion.object-meta.xml,1,34,".Title","User.Title","<searchResultsAdditionalFields>VERSION.TITLE</searchResultsAdditionalFields>"
+force-app\main\default\objects\Lead\Lead.object-meta.xml,1,271,".Title","User.Title","<searchResultsAdditionalFields>LEAD.TITLE</searchResultsAdditionalFields>"
+force-app\main\default\objects\User\User.object-meta.xml,1,240,".Title","User.Title","<searchResultsAdditionalFields>CORE.USERS.TITLE</searchResultsAdditionalFields>"
+force-app\main\default\permissionsets\Sales_Representative.permissionset-meta.xml,1,756,".Title","User.Title","<field>Lead.Title</field>"

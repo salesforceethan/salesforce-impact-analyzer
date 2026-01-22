@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>App page hosting the Flow Monitor Dashboard LWC</description>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>c__flowMonitorDashboard</componentName>
+                <identifier>FlowMonitorDashboard</identifier>
+                <properties/>
+            </componentInstance>
+        </itemInstances>
+        <name>main</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>Flow_Monitor_Dashboard</masterLabel>
+    <pageTemplate>flexipage:appHomeTemplate</pageTemplate>
+    <sobjectType></sobjectType>
+    <template>
+        <name>flexipage:appHomeTemplate</name>
+    </template>
+    <type>AppPage</type>
+</FlexiPage>
