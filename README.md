@@ -1,18 +1,35 @@
-# Salesforce DX Project: Next Steps
+# Salesforce Impact Analyzer (CLI)
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+A lightweight CLI tool to analyze Salesforce metadata dependencies and field usage across your org.
 
-## How Do You Plan to Deploy Your Changes?
+Quickly find where a field is referenced in Apex, Flows, Permission Sets, Validation Rules, Sharing Rules, reports, and more — all locally from your SFDX project.
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+Built for Salesforce Admins and Developers who want fast impact analysis before making changes.
 
-## Configure Your Salesforce DX Project
+---
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+## Features
 
-## Read All About It
+- Search by field name (example: `OwnerId`, `FirstName`, `User.Title`)
+- Supports multiple targets in one command
+- Scans local Salesforce metadata (no API calls)
+- Shows per-field summary and top matching files
+- Pattern expansion for Flow, Apex, and metadata formats
+- Fast and dependency-free scanning
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+---
+
+## Requirements
+
+- Node.js 18+
+- Salesforce project using SFDX format
+- Metadata retrieved locally in `force-app/main/default`
+
+---
+
+## Installation
+
+```bash
+git clone https://github.com/salesforceethan/salesforce-impact-analyzer.git
+cd salesforce-impact-analyzer/sf-impact
+npm install
