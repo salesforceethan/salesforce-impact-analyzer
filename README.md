@@ -10,7 +10,7 @@ Built for Salesforce Admins and Developers who want fast impact analysis before 
 
 ## Features
 
-- Search by field name (example: `OwnerId`, `FirstName`, `User.Title`)
+- Search by field name (example: `OwnerId`, `FirstName`, `Address`)
 - Supports multiple targets in one command
 - Scans local Salesforce metadata (no API calls)
 - Shows per-field summary and top matching files
@@ -39,14 +39,11 @@ npm install
 This tool scans your local Salesforce metadata (SFDX project) to find where fields are referenced.
 
 1. Retrieve Metadata from Salesforce
-From your SFDX project root, retrieve metadata so it exists locally: sfdx force:source:retrieve -m CustomObject,ApexClass,ApexTrigger,Flow,ValidationRule,SharingRules,PermissionSet
-(You can also retrieve metadata using the VS Code Org Browser.)
+From your SFDX project root, retrieve metadata so it exists locally
 
 2. Confirm files exist in: force-app/main/default
 
-3. Run the Analyzer
-   
-From the sf-impact folder
+3. Run the Analyzer from the sf-impact folder
 
 Single field: 
 -node ./bin/cli.js analyze "OwnerId" --project ..
@@ -69,9 +66,6 @@ Files scanned: 25 | Files matched: 2 | Total matches: 2
 
 ## Notes
 
-Search by field name, not object.field (except for special cases like User.Title)
-Results depend on what metadata you retrieve locally
-No Salesforce API calls are made
-Large projects may take a few seconds to scan
+Search by field name, not object.field (except for special cases like User.Title). Results depend on what metadata you retrieve locally. No Salesforce API calls are made. Large projects may take a few seconds to scan
 
 
